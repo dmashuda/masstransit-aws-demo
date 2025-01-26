@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppHost", "AppHost\AppHost.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceDefaults", "ServiceDefaults\ServiceDefaults.csproj", "{F5E6C61B-CEBC-4387-BC1B-B42BF252A497}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{7DC57FC5-157D-4B2E-B156-4439B8807D91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Components", "Components\Components.csproj", "{DB5CDAD9-64E2-4A8B-B269-FD40E142CEBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{F5E6C61B-CEBC-4387-BC1B-B42BF252A497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5E6C61B-CEBC-4387-BC1B-B42BF252A497}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5E6C61B-CEBC-4387-BC1B-B42BF252A497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC57FC5-157D-4B2E-B156-4439B8807D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC57FC5-157D-4B2E-B156-4439B8807D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC57FC5-157D-4B2E-B156-4439B8807D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC57FC5-157D-4B2E-B156-4439B8807D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB5CDAD9-64E2-4A8B-B269-FD40E142CEBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB5CDAD9-64E2-4A8B-B269-FD40E142CEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB5CDAD9-64E2-4A8B-B269-FD40E142CEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5CDAD9-64E2-4A8B-B269-FD40E142CEBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
