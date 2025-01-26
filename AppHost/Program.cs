@@ -26,6 +26,12 @@ builder.AddProject<Backend>("Backend")
     .WithEnvironment($"AWS_SECRET_KEY", "default")
     .WithEnvironment($"AWS_ACCESS_KEY", "default");
 
+builder.AddProject<Api>("Api")
+    .WaitFor(localStack)
+    .WithEnvironment($"AWS_ENDPOINT_URL", localStackUri.ToString())
+    .WithEnvironment($"AWS_SECRET_KEY", "default")
+    .WithEnvironment($"AWS_ACCESS_KEY", "default");
+
 ;
 
 builder.Build().Run();

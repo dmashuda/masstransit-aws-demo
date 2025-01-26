@@ -1,0 +1,12 @@
+@Api_HostAddress = http://localhost:5252
+
+POST {{Api_HostAddress}}/order/
+Accept: application/json
+Content-Type: application/json
+
+{
+    "OrderId": "244751b7-5ea7-40c0-859c-8b9fa511971e",
+    "CustomerNumber": "dan mashudddda"
+}
+
+###
