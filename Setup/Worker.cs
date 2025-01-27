@@ -21,7 +21,6 @@ public class Worker(
         {
             using var scope = serviceProvider.CreateScope();
             var busControl = scope.ServiceProvider.GetRequiredService<IBusControl>();
-
             await busControl.DeployAsync(cancellationToken);
         }
         catch (Exception ex)

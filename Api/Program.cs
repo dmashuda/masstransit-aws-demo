@@ -15,6 +15,7 @@ builder.Services.AddMassTransit(x =>
 {
     x.UsingAmazonSqs((context, cfg) =>
     {
+        cfg.DeployTopologyOnly = false;
         cfg.Host("us-east-1", h =>
         {
             h.Config(new AmazonSQSConfig
@@ -24,7 +25,6 @@ builder.Services.AddMassTransit(x =>
             h.AccessKey(builder.Configuration["AWS_ACCESS_KEY"]);
             h.SecretKey(builder.Configuration["AWS_SECRET_KEY"]);
         });
-        cfg.ConfigureEndpoints(context);
     });
 });
 

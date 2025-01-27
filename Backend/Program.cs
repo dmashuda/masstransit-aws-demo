@@ -13,6 +13,7 @@ builder.Services.AddMassTransit(x =>
     x.AddConsumer<ProcessOrderConsumerDup>();
     x.UsingAmazonSqs((context, cfg) =>
     {
+        cfg.DeployTopologyOnly = false;
         cfg.Host("us-east-1", h =>
         {
             h.Config(new AmazonSQSConfig

@@ -14,7 +14,8 @@ var localStackUri = new Uri("http://localhost:4566");
 
 var localStack = builder.AddContainer("localstack", "localstack/localstack")
     .WithEndpoint(port: localStackUri.Port, targetPort: 4566, scheme: "http")
-    .WithEnvironment("DEBUG", "1");
+    .WithEnvironment("DEBUG", "1")
+    .WithHttpHealthCheck("/_localstack/health");
 
 // var awsResources = builder.AddAWSCloudFormationTemplate("LocalStackExample-Stack", "aws-resources.template");
 // awsResources.Resource.CloudFormationClient = cfClient;
