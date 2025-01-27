@@ -19,18 +19,28 @@ var localStack = builder.AddContainer("localstack", "localstack/localstack")
 // var awsResources = builder.AddAWSCloudFormationTemplate("LocalStackExample-Stack", "aws-resources.template");
 // awsResources.Resource.CloudFormationClient = cfClient;
 
+var setup = builder.AddProject<Setup>("Setup")
+    .WaitFor(localStack)
+    .WithEnvironment($"AWS_ENDPOINT_URL", localStackUri.ToString())
+    .WithEnvironment($"AWS_SECRET_KEY", "default")
+    .WithEnvironment($"AWS_ACCESS_KEY", "default");
+
 
 builder.AddProject<Backend>("Backend")
     .WaitFor(localStack)
+    .WaitForCompletion(setup)
     .WithEnvironment($"AWS_ENDPOINT_URL", localStackUri.ToString())
     .WithEnvironment($"AWS_SECRET_KEY", "default")
     .WithEnvironment($"AWS_ACCESS_KEY", "default");
 
 builder.AddProject<Api>("Api")
     .WaitFor(localStack)
+    .WaitForCompletion(setup)
     .WithEnvironment($"AWS_ENDPOINT_URL", localStackUri.ToString())
     .WithEnvironment($"AWS_SECRET_KEY", "default")
     .WithEnvironment($"AWS_ACCESS_KEY", "default");
+
+
 
 ;
 
