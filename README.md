@@ -6,11 +6,11 @@ The project is built using C# and showcases how to integrate Aspire, MassTransit
 ## Features
 
 - Runs 100% local (no aws account required)
-- Topography Creation Seperated from Api/Backend Worker Applications
+- Topology Creation Seperated from Api/Backend Worker Applications
 - Aspire app host
   - Distributed tracing between Api/Backend Worker Applications
 
-  - ![Create Topography](img/trace_create_topography.png)
+  - ![Create Topology](img/trace_create_topology.png)
   - ![Post Order](img/trace_post_order.png)
 
 ## Prerequisites
@@ -52,7 +52,7 @@ To send a request to the api run [Api/Api.http](Api/Api.http)
 - `Components/` Class Library For Consumers
 - `Contracts/` Class Library for Message Contracts
 - `ServiceDefaults/` Aspire ServiceDefaults
-- `Setup/` Application that creates Bus Topography (the sqs/sns resources)
+- `Setup/` Application that creates Bus Topology (the sqs/sns resources)
 
 ## Contributing
 
