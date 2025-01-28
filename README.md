@@ -10,6 +10,9 @@ The project is built using C# and showcases how to integrate Aspire, MassTransit
 - Aspire app host
   - Distributed tracing between Api/Backend Worker Applications
 
+  - ![Create Topography](img/trace_create_topography.png)
+  - ![Post Order](img/trace_post_order.png)
+
 ## Prerequisites
 
 - .NET 9.0 SDK or later [official .NET website](https://dotnet.microsoft.com/download).
