@@ -1,4 +1,5 @@
 using Amazon.SQS;
+using Components.OrderManagement;
 using Contracts;
 using MassTransit;
 
@@ -15,6 +16,7 @@ builder.Services.AddMassTransit(x =>
 {
     x.UsingAmazonSqs((context, cfg) =>
     {
+        // x.AddConsumer<ProcessOrderConsumer>();
         cfg.DeployTopologyOnly = false;
         cfg.Host("us-east-1", h =>
         {
